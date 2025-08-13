@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useMemo, useState } from 'react';
 import { Appearance } from 'react-native';
-import { themes } from '../../shared/ui/theme/tokens';
-import type { Theme, ColorScheme } from '../../shared/ui/theme/types';
+import { themes } from './tokens';
+import type { Theme, ColorScheme } from './types';
 
 export type ThemeContextValue = {
   theme: Theme;

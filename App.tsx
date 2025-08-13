@@ -1,7 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
-import React, { useMemo } from 'react';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import ThemeProvider, { useTheme } from './src/app/providers/ThemeProvider';
+import React from 'react';
+import { SafeAreaView, Text } from 'react-native';
+import ThemeProvider, { useTheme } from './src/shared/ui/theme/ThemeProvider';
 
 export default function App() {
   return (
@@ -13,41 +12,22 @@ export default function App() {
 
 function ThemedRoot() {
   const { theme } = useTheme();
-  const styles = useMemo(
-    () =>
-      StyleSheet.create({
-        container: {
-          backgroundColor: theme.colors.background,
-          flex: 1,
-        },
-        inner: {
-          alignItems: 'center',
-          flex: 1,
-          justifyContent: 'center',
-          paddingHorizontal: theme.spacing.xl,
-        },
-        subtitle: {
-          color: theme.colors.textMuted,
-          fontSize: theme.typography.sizes.md,
-          textAlign: 'center',
-        },
-        title: {
-          color: theme.colors.text,
-          fontSize: theme.typography.sizes['2xl'],
-          fontWeight: theme.typography.weights.bold,
-          marginBottom: theme.spacing.md,
-        },
-      }),
-    [theme]
-  );
-
   return (
-    <SafeAreaView style={styles.container}>
-      <View style={styles.inner}>
-        <Text style={styles.title}>Builder 🚀</Text>
-        <Text style={styles.subtitle}>Welcome to your new Expo + TypeScript project.</Text>
-        <StatusBar style="auto" />
-      </View>
+    <SafeAreaView
+      style={{ flex: 1, backgroundColor: theme.colors.background, padding: theme.spacing.xl }}
+    >
+      <Text
+        style={{
+          color: theme.colors.text,
+          fontSize: theme.typography.sizes.xl,
+          fontWeight: theme.typography.weights.bold,
+        }}
+      >
+        Builder
+      </Text>
+      <Text style={{ color: theme.colors.textMuted, fontSize: theme.typography.sizes.md }}>
+        App root for tests
+      </Text>
     </SafeAreaView>
   );
 }

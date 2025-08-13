@@ -5,13 +5,21 @@
     "jsx": "react-jsx",
     "lib": ["esnext"],
     "module": "esnext",
-    "moduleResolution": "node",
+  "moduleResolution": "node",
     "noEmit": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "types": ["jest", "react", "react-native"]
+    "types": ["jest", "react", "react-native", "expo-router"],
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@features/*": ["src/features/*"],
+      "@shared/*": ["src/shared/*"],
+  "@theme/*": ["src/shared/ui/theme/*"],
+  "@assets/*": ["assets/*"]
+    }
   },
   "extends": "expo/tsconfig.base"
 }

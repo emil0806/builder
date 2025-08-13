@@ -4,10 +4,10 @@
     "slug": "builder",
     "version": "0.1.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+  "icon": "",
     "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/splash.png",
+  "image": "",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -15,17 +15,28 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.emil0806.builder"
     },
     "android": {
+      "package": "com.emil0806.builder",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "",
         "backgroundColor": "#ffffff"
       }
     },
     "web": {
       "bundler": "metro",
-      "favicon": "./assets/favicon.png"
-    }
+  "favicon": ""
+    },
+    "scheme": "builder",
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "root": "./app"
+        }
+      ]
+    ]
   }
 }
