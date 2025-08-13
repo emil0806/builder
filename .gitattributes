@@ -1,0 +1,23 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Ensure consistent line endings for common extensions
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+
+# Treat lockfiles as text for clearer diffs
+package-lock.json -diff
+pnpm-lock.yaml -diff
+yarn.lock -diff
+
+# Improve diff for TypeScript/JSX
+*.ts diff=ts
+*.tsx diff=ts
+*.js diff=javascript
+*.jsx diff=javascript
