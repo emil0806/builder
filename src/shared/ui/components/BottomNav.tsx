@@ -31,7 +31,7 @@ const BottomNav: React.FC<BottomNavProps> = ({ hidden }) => {
         backgroundColor: theme.colors.background,
         borderTopColor: theme.colors.border,
         borderTopWidth: 1,
-        paddingBottom: theme.spacing.lg,
+        paddingBottom: theme.spacing.xxs,
         paddingTop: theme.spacing.md,
         paddingHorizontal: theme.spacing.xl,
       }}

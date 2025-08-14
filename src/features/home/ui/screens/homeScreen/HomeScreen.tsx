@@ -12,7 +12,7 @@ const HomeScreen: React.FC = () => {
   const userId = 'user_1';
   const { projects, tasks, isLoading, hasError } = useHomeData({ companyId, userId });
 
-  const container = useMemo(() => ({ flex: 1, paddingHorizontal: theme.spacing.xl }), [theme]);
+  const container = useMemo(() => ({ flex: 1, paddingHorizontal: theme.spacing.xl, backgroundColor: theme.colors.background }), [theme]);
   const sectionTitle = useMemo(() => ({
     color: theme.colors.text,
     fontSize: theme.typography.sizes.lg,
